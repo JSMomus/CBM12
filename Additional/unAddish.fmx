@@ -1,0 +1,234 @@
+object fmAddish: TfmAddish
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 544
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Orientations = [Portrait]
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnCloseQuery = FormCloseQuery
+  DesignerMasterStyle = 3
+  object lbKey: TLabel
+    Position.X = 64.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'API Key'
+    TabOrder = 0
+  end
+  object lbSecret: TLabel
+    Position.X = 192.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = 'API Secret'
+    TabOrder = 1
+  end
+  object edKey: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    TextSettings.HorzAlign = Center
+    Position.X = 16.000000000000000000
+    Position.Y = 24.000000000000000000
+    Enabled = False
+  end
+  object edSecret: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    TextSettings.HorzAlign = Center
+    Position.X = 208.000000000000000000
+    Position.Y = 40.000000000000000000
+    Enabled = False
+  end
+  object tbClose: TToolBar
+    Align = Bottom
+    Position.Y = 496.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    TintColor = claSilver
+    object btClose: TButton
+      Align = Client
+      StyledSettings = [FontColor]
+      Size.Width = 640.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'CLOSE'
+      TextSettings.Font.Family = 'Times New Roman'
+      TextSettings.Font.Size = 24.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      OnClick = btCloseClick
+    end
+  end
+  object chbADGuard: TCheckBox
+    Position.X = 16.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Auth. data guard'
+    OnChange = chbADGuardChange
+  end
+  object edMTC: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 8
+    Text = 'btc'
+    TextSettings.HorzAlign = Center
+    Position.X = 40.000000000000000000
+    Position.Y = 104.000000000000000000
+  end
+  object edMTQ: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 13
+    Text = '0.0001'
+    TextSettings.HorzAlign = Center
+    Position.X = 232.000000000000000000
+    Position.Y = 96.000000000000000000
+  end
+  object lbMTC: TLabel
+    Position.X = 64.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Min. trade coin'
+    TabOrder = 15
+  end
+  object lbMTQ: TLabel
+    Position.X = 272.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Min. trade quant.'
+    TabOrder = 17
+  end
+  object lbMinPart: TLabel
+    Position.X = 40.000000000000000000
+    Position.Y = 216.000000000000000000
+    Text = 'Min. part'
+    TabOrder = 19
+  end
+  object lbExpTime: TLabel
+    Position.X = 240.000000000000000000
+    Position.Y = 304.000000000000000000
+    Size.Width = 177.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Expire (in hours)'
+    TabOrder = 20
+  end
+  object edMinPart: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 22
+    Text = '0.1'
+    TextSettings.HorzAlign = Center
+    Position.X = 40.000000000000000000
+    Position.Y = 248.000000000000000000
+  end
+  object edExpTime: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 23
+    Text = '72'
+    TextSettings.HorzAlign = Center
+    Position.X = 240.000000000000000000
+    Position.Y = 336.000000000000000000
+    Size.Width = 129.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object lbMaxTQ: TLabel
+    Position.X = 264.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Max. trade quant.'
+    TabOrder = 16
+  end
+  object lbMaxTC: TLabel
+    Position.X = 56.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Max. trade coin'
+    TabOrder = 14
+  end
+  object edMaxTQ: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 11
+    Text = '1000'
+    TextSettings.HorzAlign = Center
+    Position.X = 224.000000000000000000
+    Position.Y = 160.000000000000000000
+  end
+  object edMaxTC: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 7
+    Text = 'usd'
+    TextSettings.HorzAlign = Center
+    Position.X = 32.000000000000000000
+    Position.Y = 168.000000000000000000
+  end
+  object edCMRE: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 9
+    Text = '1.005'
+    TextSettings.HorzAlign = Center
+    Position.X = 208.000000000000000000
+    Position.Y = 424.000000000000000000
+  end
+  object edFee: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 6
+    Text = '0.002'
+    TextSettings.HorzAlign = Center
+    Position.X = 16.000000000000000000
+    Position.Y = 432.000000000000000000
+  end
+  object lbFee: TLabel
+    Position.X = 40.000000000000000000
+    Position.Y = 400.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Fee'
+    TabOrder = 10
+  end
+  object lbCMRE: TLabel
+    Position.X = 248.000000000000000000
+    Position.Y = 400.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'CMR excess'
+    TabOrder = 12
+  end
+  object edDvt: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 21
+    Text = '0.2'
+    TextSettings.HorzAlign = Center
+    Position.X = 40.000000000000000000
+    Position.Y = 328.000000000000000000
+  end
+  object lbDvt: TLabel
+    Position.X = 40.000000000000000000
+    Position.Y = 296.000000000000000000
+    Text = 'Deviation'
+    TabOrder = 18
+  end
+  object chbTimedPart: TCheckBox
+    Position.X = 256.000000000000000000
+    Position.Y = 232.000000000000000000
+    TabOrder = 24
+    Text = 'Timed part'
+  end
+end

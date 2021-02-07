@@ -1,0 +1,92 @@
+object fmCoins: TfmCoins
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 474
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  FullScreen = True
+  OnCreate = FormCreate
+  OnCloseQuery = FormCloseQuery
+  DesignerMasterStyle = 3
+  object tbControl: TToolBar
+    Size.Width = 474.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claSilver
+    object btAdd: TButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'additembutton'
+      TabOrder = 0
+      Text = 'btAdd'
+      OnClick = btAddClick
+    end
+    object btDel: TButton
+      Align = Right
+      Position.X = 426.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'deleteitembutton'
+      TabOrder = 1
+      Text = 'btDel'
+      OnClick = btDelClick
+    end
+    object btMod: TButton
+      Align = Left
+      Position.X = 48.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'composetoolbutton'
+      TabOrder = 2
+      Text = 'btMod'
+      OnClick = btModClick
+    end
+  end
+  object tbClose: TToolBar
+    Align = Bottom
+    Position.Y = 432.000000000000000000
+    Size.Width = 474.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    TintColor = claSilver
+    object btClose: TButton
+      Align = Client
+      StyledSettings = [FontColor]
+      Size.Width = 474.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'CLOSE'
+      TextSettings.Font.Family = 'Times New Roman'
+      TextSettings.Font.Size = 24.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      OnClick = btCloseClick
+    end
+  end
+  object lbCoins: TListBox
+    Align = Client
+    Size.Width = 474.000000000000000000
+    Size.Height = 384.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'transparentlistboxstyle'
+    TabOrder = 2
+    OnPainting = lbCoinsPainting
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    ShowCheckboxes = True
+    OnChangeCheck = lbCoinsChangeCheck
+    Viewport.Width = 474.000000000000000000
+    Viewport.Height = 384.000000000000000000
+  end
+end

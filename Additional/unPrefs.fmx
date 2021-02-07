@@ -1,0 +1,152 @@
+object fmPrefs: TfmPrefs
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 360
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  FullScreen = True
+  OnCreate = FormCreate
+  OnCloseQuery = FormCloseQuery
+  DesignerMasterStyle = 3
+  object tbClose: TToolBar
+    Align = MostBottom
+    Position.Y = 432.000000000000000000
+    Size.Width = 360.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claSilver
+    object btClose: TButton
+      Align = Client
+      StyledSettings = [FontColor]
+      Size.Width = 360.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'CLOSE'
+      TextSettings.Font.Family = 'Times New Roman'
+      TextSettings.Font.Size = 24.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      OnClick = btCloseClick
+    end
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Top
+    Size.Width = 360.000000000000000000
+    Size.Height = 145.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 360.000000000000000000
+    Viewport.Height = 145.000000000000000000
+  end
+  object loutParams: TLayout
+    Align = Bottom
+    Position.Y = 272.000000000000000000
+    Size.Width = 360.000000000000000000
+    Size.Height = 160.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object cbBaseURLs: TComboBox
+      Position.X = 8.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 129.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+    object lbBaseURL: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Base URL'
+      TabOrder = 1
+    end
+    object lbDepthLimit: TLabel
+      Position.X = 216.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 106.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Depth limit'
+      TabOrder = 2
+    end
+    object lbReqInt: TLabel
+      Position.X = 184.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 153.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Request interval'
+      TabOrder = 3
+    end
+    object edDepthLimit: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 4
+      Position.X = 224.000000000000000000
+      Position.Y = 40.000000000000000000
+    end
+    object edReqInt: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 5
+      Position.X = 232.000000000000000000
+      Position.Y = 112.000000000000000000
+    end
+    object btAddish: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 112.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      Text = 'Additional'
+      OnClick = btAddishClick
+    end
+    object btAddS: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'additembutton'
+      TabOrder = 7
+      OnClick = btAddSClick
+    end
+    object btDelS: TButton
+      Position.X = 88.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'deleteitembutton'
+      TabOrder = 8
+      OnClick = btDelSClick
+    end
+  end
+  object btEqMaxes: TButton
+    Enabled = False
+    Position.X = 104.000000000000000000
+    Position.Y = 168.000000000000000000
+    Size.Width = 89.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Eq. maxes'
+    OnClick = btEqMaxesClick
+  end
+  object chbEqualMaxes: TCheckBox
+    Position.X = 200.000000000000000000
+    Position.Y = 168.000000000000000000
+    Size.Width = 25.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    OnChange = chbEqualMaxesChange
+  end
+end
